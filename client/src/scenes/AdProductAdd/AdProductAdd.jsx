@@ -123,6 +123,7 @@ const AdProductAdd = () => {
 								id='stock'
 								name='stock'
 								type='number'
+								min='1'
 								placeholder='Stock*'
 								disabled={loading}
 							/>

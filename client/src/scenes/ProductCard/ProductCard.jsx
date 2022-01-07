@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { Box } from '../../components/Box/Box';
@@ -7,8 +7,11 @@ import { Text } from '../../components/Text/Text';
 import { Title } from '../../components/Title/Title';
 import { clearProduct } from '../../reducers/products/productsReducer';
 import { clearErrorMsg } from '../../reducers/ui/uiReducer';
+import { AnimatePresence } from 'framer-motion';
 
 function ProductCard({ name, price, thumbnail, id, stock }) {
+	const [isHover, setIsHover] = useState(null);
+	
 	const history = useHistory();
 	const dispatch = useDispatch();
 
@@ -22,6 +25,8 @@ function ProductCard({ name, price, thumbnail, id, stock }) {
 		<Box
 			position='relative'
 			onClick={!stock ? null : handleClick}
+			onMouseEnter={() => setIsHover(stock)}
+			onMouseLeave={() => setIsHover(null)}
 			overflow='hidden'
 			flexDirection='column'
 			width='100%'
@@ -38,19 +43,24 @@ function ProductCard({ name, price, thumbnail, id, stock }) {
 			/>
 			<Title my='15px'>{name}</Title>
 			<Text>USD {price}</Text>
-			{!stock && (
-				<Box
-					position='absolute'
-					width='100%'
-					height='50px'
-					bg='#ffeeeedf'
-					alignItems='center'
-					justifyContent='center'
-					borderRadius='5px'
-				>
-					<Title color='#420101cf'>Agotado</Title>
-				</Box>
-			)}
+			<AnimatePresence>
+				{isHover === stock && !stock && (
+					<Box
+						position='absolute'
+						width='100%'
+						height='50px'
+						bg='#ffeeeedf'
+						alignItems='center'
+						justifyContent='center'
+						borderRadius='5px'
+						initial={{y: -100}}
+						animate={{y: 0}}
+						exit={{y: -100}}
+					>
+						<Title color='#420101cf'>Agotado</Title>
+					</Box>
+				)}
+			</AnimatePresence>
 		</Box>
 	);
 }

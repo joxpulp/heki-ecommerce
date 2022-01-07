@@ -11,6 +11,7 @@ import { getCart } from '../../reducers/cart/cartReducer';
 import { newOrder } from '../../reducers/purchase/purchaseReducer';
 import Button from '../../components/Button/Button';
 import CartCard from '../CartCard/CartCard';
+import { AnimatePresence } from 'framer-motion';
 
 function CartScreenPage() {
 	const { cartData, total } = useSelector((state) => state.cart);
@@ -61,16 +62,18 @@ function CartScreenPage() {
 						exit={{ opacity: 0, x: -100 }}
 						flexDirection='column'
 					>
-						{cartData.map((cartProduct) => (
-							<CartCard
-								key={cartProduct._id}
-								name={cartProduct.name}
-								price={cartProduct.price}
-								thumbnail={cartProduct.thumbnail}
-								productId={cartProduct._id}
-								quantity={cartProduct.quantity}
-							/>
-						))}
+						<AnimatePresence initial={false}>
+							{cartData.map((cartProduct) => (
+								<CartCard
+									key={cartProduct._id}
+									name={cartProduct.name}
+									price={cartProduct.price}
+									thumbnail={cartProduct.thumbnail}
+									productId={cartProduct._id}
+									quantity={cartProduct.quantity}
+								/>
+							))}
+						</AnimatePresence>
 					</Box>
 					<Box
 						initial={{ opacity: 0, x: 200 }}

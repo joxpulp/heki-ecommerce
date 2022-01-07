@@ -18,7 +18,7 @@ function ProductPage() {
 	const { id } = useParams();
 	const history = useHistory();
 
-	const [quantity, setQuantity] = useState('');
+	const [quantity, setQuantity] = useState('1');
 
 	const dispatch = useDispatch();
 	const { product } = useSelector((state) => state.products);

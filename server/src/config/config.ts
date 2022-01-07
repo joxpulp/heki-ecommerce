@@ -13,4 +13,5 @@ export const CONFIG = {
 	GMAIL_NAME: process.env.GMAIL_NAME || 'NAME',
 	GMAIL_EMAIL: process.env.GMAIL_EMAIL || 'EMAIL',
 	GMAIL_PWD: process.env.GMAIL_PWD || 'NAME',
+	COOKIE_TIMEOUT: Number(process.env.COOKIE_TIMEOUT) || 2
 };

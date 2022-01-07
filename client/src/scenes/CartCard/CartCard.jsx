@@ -15,6 +15,10 @@ const CartCard = ({ name, price, thumbnail, productId, quantity }) => {
 			overflow='hidden'
 			width={['100%', '100%', '80%']}
 			borderBottom='1px solid black'
+			layout
+			initial={{ scale: 0 }}
+			animate={{ scale: 1 }}
+			exit={{ scale: 0 }}
 		>
 			<Image
 				borderRadius='5px'

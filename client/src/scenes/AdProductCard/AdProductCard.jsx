@@ -26,6 +26,7 @@ function AdProductCard({ thumbnail, id }) {
 			flexDirection='column'
 			width='100%'
 			alignItems='center'
+			layout
 		>
 			<Image width='100%' src={thumbnail} alt='productImg' />
 			<Box width='100%' alignItems='center' justifyContent='center' my='15px'>

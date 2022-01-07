@@ -20,7 +20,7 @@ const app = express();
 export const sessionMiddleware = session({
 	store: connectMongo.create({ mongoUrl: CONFIG.MONGO_URL }),
 	secret: CONFIG.SECRET,
-	cookie: { sameSite: true, secure: 'auto', maxAge: 1000 * 120 },
+	cookie: { sameSite: false, secure: 'auto', maxAge: CONFIG.COOKIE_TIMEOUT * 60 * 1000 },
 	saveUninitialized: false,
 	resave: true,
 	rolling: true,

@@ -3,8 +3,6 @@ import reactRefresh from '@vitejs/plugin-react-refresh';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-	plugins: [
-		reactRefresh(),
-	],
-	build: { outDir: '../proyectofinal-nov/public' },
+	plugins: [reactRefresh()],
+	build: { outDir: '../server/public' },
 });
