@@ -22,6 +22,7 @@ function ProductPage() {
 
 	const dispatch = useDispatch();
 	const { product } = useSelector((state) => state.products);
+	const { totalItems } = useSelector((state) => state.cart);
 	const { loading, errorMsg } = useSelector((state) => state.ui);
 
 	const handleCart = () => {
@@ -30,7 +31,7 @@ function ProductPage() {
 
 	useEffect(() => {
 		dispatch(getProductById(id));
-	}, [dispatch, id]);
+	}, [dispatch, id, totalItems]);
 
 	if (errorMsg) {
 		return (
@@ -109,6 +110,8 @@ function ProductPage() {
 									>
 										{product.stock < 1
 											? 'Agotado'
+											: product.stock === 1
+											? 'Ultima unidad'
 											: product.stock <= 10
 											? `Ultimas ${product.stock} unidades`
 											: 'Stock disponible'}

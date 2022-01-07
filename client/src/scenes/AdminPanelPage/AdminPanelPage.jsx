@@ -8,6 +8,7 @@ import MainBase from '../../components/MainBase/MainBase';
 import DescriptionSection from '../../components/DescriptionSection/DescriptionSection';
 import GridSection from '../../components/GridSection/GridSection';
 import AdProductCard from '../AdProductCard/AdProductCard';
+import { AnimatePresence } from 'framer-motion';
 
 function AdminPanelPage() {
 	const history = useHistory();
@@ -23,20 +24,25 @@ function AdminPanelPage() {
 		<MainBase>
 			<DescriptionSection>
 				<Title mb='20px'>Admin Panel (Add, Edit and Delete Products)</Title>
-				<ButtonBase onClick={() => history.push('/adminpanel/add')} width='150px'>
+				<ButtonBase
+					onClick={() => history.push('/adminpanel/add')}
+					width='150px'
+				>
 					Add Product
 				</ButtonBase>
 			</DescriptionSection>
 			<GridSection>
-				{products.map((product, index) => (
-					<AdProductCard
-						key={index}
-						id={product._id}
-						name={product.name}
-						price={product.price}
-						thumbnail={product.thumbnail}
-					/>
-				))}
+				<AnimatePresence>
+					{products.map((product, index) => (
+						<AdProductCard
+							key={index}
+							id={product._id}
+							name={product.name}
+							price={product.price}
+							thumbnail={product.thumbnail}
+						/>
+					))}
+				</AnimatePresence>
 			</GridSection>
 		</MainBase>
 	);

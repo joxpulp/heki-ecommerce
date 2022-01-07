@@ -52,7 +52,6 @@ function ProductCard({ name, price, thumbnail, id, stock }) {
 						bg='#ffeeeedf'
 						alignItems='center'
 						justifyContent='center'
-						borderRadius='5px'
 						initial={{y: -100}}
 						animate={{y: 0}}
 						exit={{y: -100}}
