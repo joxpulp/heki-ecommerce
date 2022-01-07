@@ -10,7 +10,7 @@ class Product {
 			const singleProduct = await products.findById(id);
 			if (singleProduct) outputGet.push(singleProduct);
 		} else {
-			outputGet = await products.find();
+			outputGet = await products.find({}, null, { sort: '-_id' });
 		}
 		return outputGet;
 	}
