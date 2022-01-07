@@ -1,0 +1,73 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Backend: https://finalcoder3.herokuapp.com/",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon",
+    "deploy": "git add . && git commit -m 'Heroku' && git push heroku HEAD:main",
+    "start": "node dist/index.js",
+    "artillery": "artillery run artillery/artillery.yaml > resultsartillery2.txt",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "artillery": "^2.0.0-4",
+    "bcrypt": "^5.0.1",
+    "cloudinary": "^1.27.1",
+    "cluster": "^0.7.7",
+    "connect-mongo": "^4.6.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dayjs": "^1.10.7",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.1",
+    "express-session": "^1.17.2",
+    "heroku-ssl-redirect": "^0.1.1",
+    "log4js": "^6.3.0",
+    "mongodb": "^4.1.4",
+    "mongoose": "^6.0.12",
+    "nodemailer": "^6.7.0",
+    "os": "^0.1.2",
+    "passport": "^0.5.0",
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7",
+    "socket.io": "^4.4.0",
+    "swagger-jsdoc": "^6.1.0",
+    "swagger-ui-express": "^4.2.0",
+    "twilio": "^3.71.1",
+    "yup": "^0.32.11",
+    "yup-phone": "^1.2.19"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.0",
+    "@types/connect-mongo": "^3.1.3",
+    "@types/cookie-parser": "^1.4.2",
+    "@types/cors": "^2.8.12",
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.13",
+    "@types/express-fileupload": "^1.1.7",
+    "@types/express-session": "^1.17.4",
+    "@types/mongoose": "^5.11.97",
+    "@types/nodemailer": "^6.4.4",
+    "@types/passport": "^1.0.7",
+    "@types/passport-local": "^1.0.34",
+    "@types/swagger-jsdoc": "^6.0.1",
+    "@types/swagger-ui-express": "^4.1.3",
+    "@types/yup": "^0.29.13",
+    "nodemon": "^2.0.14",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.4.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joxpulp/finalcodernov.git"
+  },
+  "bugs": {
+    "url": "https://github.com/joxpulp/finalcodernov/issues"
+  },
+  "homepage": "https://github.com/joxpulp/finalcodernov#readme"
+}
