@@ -16,7 +16,7 @@ Go to the project directory
   cd challenge-fullstack
 ```
 
-- [Frontend Doc](https://github.com/joxpulp/challenge-fullstack/tree/main/client#readme)
-- [Backend Doc](https://github.com/joxpulp/challenge-fullstack/tree/main/server#readme)
+- [Frontend Doc](https://github.com/joxpulp/heki-ecommerce/tree/main/client#readme)
+- [Backend Doc](https://github.com/joxpulp/heki-ecommerce/tree/main/server#readme)
 
 
