@@ -7,13 +7,13 @@ E-commerce Fullstack APP
 Clone the project
 
 ```bash
-  git clone https://github.com/joxpulp/challenge-fullstack.git
+  git clone https://github.com/joxpulp/heki-ecommerce.git
 ```
 
 Go to the project directory
 
 ```bash
-  cd challenge-fullstack
+  cd heki-ecommerce
 ```
 
 - [Frontend Doc](https://github.com/joxpulp/heki-ecommerce/tree/main/client#readme)
