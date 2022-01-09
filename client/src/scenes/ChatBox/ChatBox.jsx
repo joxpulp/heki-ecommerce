@@ -10,6 +10,7 @@ const ChatBox = () => {
 	const { userData } = useSelector((state) => state.auth);
 	const [message, setMessage] = useState('');
 	const [messages, setMessages] = useState([]);
+	
 	const socket = io('https://hekitech.herokuapp.com', {
 		transports: ['websocket'],
 	});
