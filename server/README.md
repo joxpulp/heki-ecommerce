@@ -1,6 +1,6 @@
 # Back End
 
-[API Live Demo](https://hekitech.herokuapp.com/api/products/list)
+[API Live Demo](https://heki-ecommerce-production.up.railway.app/api/products/list)
 
 ## Local Setup:
 
