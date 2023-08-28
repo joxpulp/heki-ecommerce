@@ -4,7 +4,7 @@ const options = {
 	definition: {
 		openapi: '3.0.0',
 		info: {
-			title: 'Ecommerce Project',
+			title: 'Heki Ecommerce Project',
 			version: '0.0.1',
 			description: 'Ecommerce API Application',
 			contact: {
@@ -14,7 +14,7 @@ const options = {
 		},
 		servers: [
 			{
-				url: 'https://hekitech.herokuapp.com/api',
+				url: 'https://heki-ecommerce.onrender.com/api',
 				description: 'Backend',
 			},
 		],

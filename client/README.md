@@ -2,7 +2,7 @@
 
 E-commerce Frontend Doc
 
-[React APP Live Demo](https://hekitech.herokuapp.com/)
+[React APP Live Demo](https://heki-ecommerce.onrender.com)
 
 ## Local Setup: 
 

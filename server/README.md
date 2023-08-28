@@ -1,6 +1,6 @@
 # Back End
 
-[API Live Demo](https://heki-ecommerce-production.up.railway.app/api/products/list)
+[API Live Demo](https://heki-ecommerce.onrender.com/api/products/list)
 
 ## Local Setup:
 
@@ -48,4 +48,4 @@ To run this project, you will need to add the following environment variables to
 
 ## Docs
 
-[API DOCS](https://hekitech.herokuapp.com/docs/)
+[API DOCS](https://heki-ecommerce.onrender.com/docs)

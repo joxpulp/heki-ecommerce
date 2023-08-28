@@ -11,7 +11,7 @@ const ChatBox = () => {
 	const [message, setMessage] = useState('');
 	const [messages, setMessages] = useState([]);
 	
-	const socket = io('https://hekitech.herokuapp.com', {
+	const socket = io('https://heki-ecommerce.onrender.com', {
 		transports: ['websocket'],
 	});
 
